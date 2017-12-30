@@ -19,10 +19,6 @@
           "text": "推荐电影"
         },
         {
-          "pagePath": "pages/movie/movie",
-          "text": "详情"
-        },
-        {
           "pagePath": "pages/search/search",
           "text": "搜索"
         },

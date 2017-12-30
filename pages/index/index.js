@@ -5,7 +5,7 @@ Page({
     title: "加载中..",
   },
   onLoad:function(){
-    var that = this;
+    var that = this; //保存this的数据
     wx.showToast({ //界面-交互反馈-加载中。。
       title: '加载中...',
       icon:"loading",

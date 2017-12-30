@@ -1,2 +1,13 @@
-<!--pages/movie/movie.wxml-->
-<text>pages/movie/movie.wxml</text>
+<scroll-view scroll-y="true">
+  <view class='meat'>
+    <image class='poster' src='{{movie.images.large}}' background-size="cover"></image>
+    <text class="title">{{movie.title}}({{movie.year}})</text>
+    <text class='info'>评分：{{movie.rating}}</text>
+    <text class='info'>导演：<block wx:for="{{movie.directors}}" wx:key="">{{item.name}}</block></text>
+    <text class="info">主演：<block wx:for="{{movie.casts}}" wx:key="">{{item.casts}}</block></text>
+  </view>
+  <view class='summary'>
+    <text class="label">摘要：</text>
+    <text class='content'>{{movie.summary}}</text>
+  </view>
+</scroll-view>

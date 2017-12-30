@@ -3,7 +3,7 @@
 </view>
 
 <scroll-view class='page-body' scroll-y="true">
-  <navigator url="../movie/movie" open-type="switchTab" wx:for="{{movies}}" wx:key=""> <!--../返回上一层-->
+  <navigator url="../movie/movie?id={{item.id}}" wx:for="{{movies}}" wx:key=""> <!--../返回上一层-->
     <view class='item'>
       <image class="poster" src="{{item.images.small}}"></image>
       <view class="meta">
