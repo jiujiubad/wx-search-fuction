@@ -1,0 +1,21 @@
+<view class="page-header"> <!--因为这里样式几个页面一样，所以卸载app.wxss里-->
+  <text class='page-header-text'>{{title}}</text>
+</view>
+
+<scroll-view class='page-body' scroll-y="true">
+  <navigator url="../movie/movie" open-type="switchTab" wx:for="{{movies}}" wx:key=""> <!--../返回上一层-->
+    <view class='item'>
+      <image class="poster" src="{{item.images.small}}"></image>
+      <view class="meta">
+        <text class="title">{{item.title}}</text>
+        <text class="sub-title">{{item.original_title}}({{item.year}})</text>
+        <text class="artists">
+          <text wx:for="{{item.directors}}" wx:key="">{{item.name}}</text><!--wx:for数组里可以嵌套wx:for数组-->
+        </text>
+      </view>
+      <view class="rating">
+        <text>{{item.rating.average}}</text>
+      </view>      
+    </view>
+  </navigator> 
+</scroll-view>
