@@ -1,4 +1,4 @@
-![](https://ws2.sinaimg.cn/large/006tKfTcgy1fmyvrz607ig308m0fnh98.gif)
+<img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fmyvrz607ig308m0fnh98.gif" width="250">
 
 这是豆瓣电影的小项目，主要完成页面显示、搜索功能。
 
