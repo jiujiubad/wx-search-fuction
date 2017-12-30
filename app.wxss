@@ -16,6 +16,7 @@ page{
   padding: 20rpx 40rpx;
   color: #999;
   font-size: 40rpx;
+  text-align: center;
 }
 
 /*index body共用*/

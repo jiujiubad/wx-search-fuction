@@ -1,2 +1,21 @@
-<!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<view class="page-header">
+  <input class='page-header-text' placeholder='输入搜索关键词' auto-focus bindchange="search"/>
+</view>
+
+<scroll-view class='page-body' scroll-y="true">
+  <navigator url="../movie/movie?id={{item.id}}" wx:for="{{movies}}" wx:key=""> <!--../返回上一层-->
+    <view class='item'>
+      <image class="poster" src="{{item.images.small}}"></image>
+      <view class="meta">
+        <text class="title">{{item.title}}</text>
+        <text class="sub-title">{{item.original_title}}({{item.year}})</text>
+        <text class="artists">
+          <text wx:for="{{item.directors}}" wx:key="">{{item.name}}</text><!--wx:for数组里可以嵌套wx:for数组-->
+        </text>
+      </view>
+      <view class="rating">
+        <text>{{item.rating.average}}</text>
+      </view>      
+    </view>
+  </navigator> 
+</scroll-view>
